@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+from backend.apps.accounts.models import User
 
 
 class Order(models.Model):
@@ -8,8 +9,8 @@ class Order(models.Model):
     STATUS_CONFIRMED = "confirmed"
     STATUS_SEND = "send"
     ORDER_STATUSES = (
-        (STATUS_NEW,"Новый")
-        (STATUS_CONFIRMED,"подтвержденный")
+        (STATUS_NEW,"Новый"),
+        (STATUS_CONFIRMED,"подтвержденный"),
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
