@@ -9,7 +9,7 @@
 <body>
     <h1>Главная страница</h1>
     <ul>
-        {% if not request.user.is.authenticated %}
+        {% if not request.user.is_authenticated %}
         <li> <a href="{% url 'sing_in' %}"> Войти </a></li>
         <li> <a href="{% url 'register' %}"> Регистрация </a></li>
 
